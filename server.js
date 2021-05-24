@@ -9,6 +9,9 @@ connectDB();
 // Init middleware
 app.use(express.json({ extended: false}));
 
+const cors = require('cors');
+app.use(cors());
+
 // API endpoint
 app.get('/', (req, res) => res.send('API Running'));
 
